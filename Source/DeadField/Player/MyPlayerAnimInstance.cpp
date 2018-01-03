@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "MyPlayerAnimInstance.h"
 #include "MyPlayerCharacter.h"
 #include "DeadField.h"
 
-#include "MyPlayerAnimInstance.h"
+
 
 UMyPlayerAnimInstance::UMyPlayerAnimInstance(const FObjectInitializer &ObjectInitializer) : Super(ObjectInitializer)
 {
