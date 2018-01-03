@@ -39,6 +39,7 @@ public:
 	void moveForward(float step);
 	void strafe(float step);
 	void turn(float step);
+	FVector getAnimVectorSpeed();
 
 	UPROPERTY(Category = "PlayerSettings", EditDefaultsOnly)//Скорость поворота. Чем выше скорость, тем меньше плавность
 		float TurnSpeed = 5.f;

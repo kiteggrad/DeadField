@@ -83,3 +83,8 @@ void AMyPlayerCharacter::turn(float step)
 	AddControllerYawInput(FMath::Atan2(GetActorForwardVector().X*dir.Y - dir.X*GetActorForwardVector().Y, GetActorForwardVector().X*dir.X + GetActorForwardVector().Y*dir.Y));
 }
 
+FVector AMyPlayerCharacter::getAnimVectorSpeed()
+{
+	return FRotationMatrix(FRotator(0, GetControlRotation().Yaw, 0)).InverseTransformVector(GetVelocity());
+}
+
