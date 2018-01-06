@@ -13,7 +13,7 @@ class DEADFIELD_API AWAI_Weapon_m4a1 : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	AWAI_Weapon_m4a1();
+	AWAI_Weapon_m4a1(const FObjectInitializer &ObjectInitializer);
 
 protected:
 	// Called when the game starts or when spawned
