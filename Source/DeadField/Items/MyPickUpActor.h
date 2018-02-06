@@ -4,16 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "WAI_Weapon_m4a1.generated.h"
+
+#include "MyItem.h"
+
+#include "MyPickUpActor.generated.h"
 
 UCLASS()
-class DEADFIELD_API AWAI_Weapon_m4a1 : public AActor
+class DEADFIELD_API AMyPickUpActor : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AWAI_Weapon_m4a1(const FObjectInitializer &ObjectInitializer);
+	AMyPickUpActor(const FObjectInitializer &ObjectInitializer);
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,6 +26,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	
+	UPROPERTY(EditAnywhere, blueprintReadWrite)
+		UStaticMeshComponent *MeshComp;
+	UPROPERTY(EditAnywhere, blueprintReadWrite, Instanced)
+		UMyItem *Item;
 };

@@ -24,6 +24,12 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FVector2D InventorySize;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FVector2D ToolbarSize;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TMap<FVector2D, class UMyItem*> InventoryTMap;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TMap<FVector2D, class UMyItem*> ToolbarTMap;
 };

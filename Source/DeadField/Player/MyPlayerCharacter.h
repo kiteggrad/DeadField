@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "MyInventoryComponent.h"
 
 #include "GameFramework/Character.h"
 #include "MyPlayerCharacter.generated.h"
@@ -34,13 +35,19 @@ public:
 	USpringArmComponent *cameraSpring;
 	UCameraComponent *cameraComp;
 	USceneComponent *sceneComp;
-	APlayerController *pc;
+
+	
 
 	void moveForward(float step);
 	void strafe(float step);
 	void turn(float step);
 	FVector getAnimVectorSpeed();
 
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UMyInventoryComponent *InventoryComp;
+	UPROPERTY(BlueprintReadWrite)
+		APlayerController *pc;
 	UPROPERTY(Category = "PlayerSettings", EditDefaultsOnly)//Скорость поворота. Чем выше скорость, тем меньше плавность
 		float TurnSpeed = 5.f;
 	UPROPERTY(Category = "PlayerSettings", EditDefaultsOnly)//Высота обзора

@@ -25,6 +25,8 @@ AMyPlayerCharacter::AMyPlayerCharacter(const FObjectInitializer &ObjectInitializ
 
 	GetMesh()->AddLocalOffset(FVector(0, 0, -90));
 	GetMesh()->AddLocalRotation(FRotator(0, -90, 0));
+	
+	InventoryComp = ObjectInitializer.CreateDefaultSubobject<UMyInventoryComponent>(this, "InventoryComponent");
 }
 
 // Called when the game starts or when spawned
